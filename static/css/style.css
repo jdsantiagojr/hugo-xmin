@@ -3,12 +3,22 @@ body {
   margin: auto;
   padding: 1em;
   line-height: 1.5em;
+  color: #c8c8c8;
+  background: #222;
 }
+
+a, a:hover { color: #fff; }
+a { text-decoration: none; }
+a:hover { text-decoration: underline; }
 
 /* header and footer areas */
 .menu { padding: 0; }
-.menu li { display: inline-block; }
-.article-meta, .menu a {
+.menu li {
+  display: inline-block;
+  font-size: 1.188em;
+}
+.menu li > a { text-transform: uppercase; }
+.article-meta {
   text-decoration: none;
   background: #eee;
   padding: 5px;
@@ -21,6 +31,13 @@ hr {
   border-style: dashed;
   color: #ddd;
 }
+
+/* posts list */
+#list {
+  list-style-type: none;
+  padding: 0;
+}
+#list li > a { text-transform: uppercase; }
 
 /* code */
 pre {

@@ -1,5 +1,12 @@
+@font-face {
+  font-family: 'Share Tech Mono';
+  src: url('../fonts/font.eot');
+  src: local('☺'), url('../fonts/font.woff') format('woff'), url('../fonts/font.ttf') format('truetype'), url('../fonts/font.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
 body {
-  font-family: Optima, Candara, Calibri, Arial, sans-serif;
+  font-family: 'Share Tech Mono', Monospace, Courier;
 }
 code {
   font-family: "Lucida Console", Monaco, monospace;
