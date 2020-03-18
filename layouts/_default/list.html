@@ -13,11 +13,14 @@
     {{ $paginator := .Paginate (where $pages "Section" "!=" "") }}
     {{ range $paginator.Pages }}
     <li>
-      <span class="date">{{ .Date.Format "2006-01-02" }}</span>
-      <a href="{{ .RelPermalink }}">{{ .Title | markdownify }}</a>
+      <a href="{{ .RelPermalink }}">
+        {{ if .Params.important }}<span alt="highlight" class="important">*</span>{{ end }}
+        <span class="tag">[{{ .Params.tag }}]</span>
+        {{ .Title | markdownify }}
+      </a>
     </li>
     {{ end }}
   </ul>
 </div>
-
+<!-- [{{ .Date.Format "2006-01-02" }}] -->
 {{ partial "footer.html" . }}
