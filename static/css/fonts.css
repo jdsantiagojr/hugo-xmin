@@ -7,6 +7,7 @@
 }
 body {
   font-family: 'Share Tech Mono', Monospace, Courier;
+  font-weight: 400;
 }
 code {
   font-family: "Lucida Console", Monaco, monospace;

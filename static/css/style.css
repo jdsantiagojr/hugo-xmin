@@ -1,8 +1,12 @@
+:root {
+  --content-max-width: 900px;
+  --content-padding: 0 20px;
+}
+
 body {
-  max-width: 800px;
-  margin: auto;
-  padding: 1em;
-  line-height: 1.5em;
+  letter-spacing: 0.1px;
+  padding: 0;
+  margin: 0;
   color: #c8c8c8;
   background: #222;
 }
@@ -11,58 +15,53 @@ a, a:hover { color: #fff; }
 a { text-decoration: none; }
 a:hover { text-decoration: underline; }
 
-/* header and footer areas */
-.menu { padding: 0; }
-.menu li {
-  display: inline-block;
-  font-size: 1.188em;
-}
-.menu li > a { text-transform: uppercase; }
-.article-meta {
-  text-decoration: none;
-  background: #eee;
-  padding: 5px;
-  border-radius: 5px;
-}
-.menu, .article-meta, footer { text-align: center; }
-.title { font-size: 1.1em; }
-footer a { text-decoration: none; }
-hr {
-  border-style: dashed;
-  color: #ddd;
+p {
+  padding: 0;
+  margin: 10px 0 30px 0;
 }
 
-/* posts list */
+#nav {
+  height: 66px;
+  width: 100%;
+  margin: auto;
+  margin-bottom: 50px;
+  border-bottom: dotted 1px #444;
+  text-transform: uppercase;
+  color: #fff;
+  font-size: 1.063em;
+}
+#nav > .inner {
+  display: flex;
+  max-width: var(--content-max-width);
+  margin: auto;
+  padding: var(--content-padding);
+  align-items: center;
+}
+#nav > .inner > .title,
+#nav > .inner > .menu { flex: 1 auto; }
+#nav > .inner > .menu > span:first-child { display: none; }
+#nav > .inner > .menu { text-align: right; }
+
+#page {
+  max-width: var(--content-max-width);
+  margin: auto;
+  padding: var(--content-padding);
+}
+
+#page > .title {
+  display: inline-block;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  color: #FFF;
+
+}
+#page > .title,
+#page > .author {
+  text-transform: uppercase;
+}
+
 #list {
   list-style-type: none;
   padding: 0;
 }
 #list li > a { text-transform: uppercase; }
-
-/* code */
-pre {
-  border: 1px solid #ddd;
-  box-shadow: 5px 5px 5px #eee;
-  padding: 1em;
-  overflow-x: auto;
-}
-code { background: #f9f9f9; }
-pre code { background: none; }
-
-/* misc elements */
-img, iframe, video { max-width: 100%; }
-main { hyphens: auto; }
-blockquote {
-  background: #f9f9f9;
-  border-left: 5px solid #ccc;
-  padding: 3px 1em 3px;
-}
-
-table {
-  margin: auto;
-  border-top: 1px solid #666;
-  border-bottom: 1px solid #666;
-}
-table thead th { border-bottom: 1px solid #ddd; }
-th, td { padding: 5px; }
-thead, tfoot, tr:nth-child(even) { background: #eee; }
